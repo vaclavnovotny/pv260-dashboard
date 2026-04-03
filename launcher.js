@@ -8,11 +8,16 @@ const { exec } = require('child_process');
 const path = require('path');
 
 const PORT = 3002; // must match LAUNCHER_URL in src/frontend/src/App.jsx
+const ALLOWED_ORIGINS = ['http://localhost:3001', 'http://localhost:5173'];
 const dir = path.resolve(__dirname);
 
 const server = http.createServer((req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+  const origin = req.headers.origin;
+  if (ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Content-Type', 'application/json');
 
   if (req.method === 'OPTIONS') {

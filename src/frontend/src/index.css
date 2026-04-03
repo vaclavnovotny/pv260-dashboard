@@ -73,6 +73,34 @@ code {
   font-weight: 600;
 }
 
+.btn-claude {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #1e2535;
+  border: 1px solid #2e3346;
+  color: rgba(255,255,255,0.75);
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-claude:hover:not(:disabled) {
+  background: #252836;
+  border-color: #D4A574;
+  color: #D4A574;
+}
+
+.btn-claude:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .app-main {
   max-width: 1100px;
   width: 100%;
