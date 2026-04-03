@@ -1,3 +1,5 @@
+### disclaimer: vibecoded slop
+
 # pv260-dashboard
 
 Visualization tool for PV260 seminar points. Displays student scores collected from IS MUNI as charts and tables.
