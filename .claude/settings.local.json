@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(node -e \"require\\(''./index''\\); console.log\\(''OK''\\)\")",
+      "*",
+      "Bash(\"C:/Users/ganz/Documents/PV260/app/backend/src/routes/courses.js\":*)",
+      "Bash(__NEW_LINE_9a2eee10d9479fe3__ cat:*)",
+      "Bash(\"C:/Users/ganz/Documents/PV260/app/backend/src/routes/upload.js\":*)",
+      "Bash(\"C:/Users/ganz/Documents/PV260/app/backend/src/routes/stats.js\":*)",
+      "Bash(npx jest:*)",
+      "Bash(npm test:*)",
+      "Bash(npm create:*)",
+      "Bash(npx vite:*)",
+      "Bash(cd:*)",
+      "Bash(curl:*)",
+      "Bash(node -e \"const {animals} = require\\(''unique-names-generator''\\); const STRIDE=37; console.log\\([0,1,2,3,4,5,6,7].map\\(i => animals[\\(i*STRIDE\\)%animals.length]\\).join\\('', ''\\)\\)\")",
+      "Bash(npm uninstall:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker build:*)"
+    ]
+  }
+}
