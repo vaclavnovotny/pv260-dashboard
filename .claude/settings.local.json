@@ -18,7 +18,11 @@
       "Bash(node -e \"const {animals} = require\\(''unique-names-generator''\\); const STRIDE=37; console.log\\([0,1,2,3,4,5,6,7].map\\(i => animals[\\(i*STRIDE\\)%animals.length]\\).join\\('', ''\\)\\)\")",
       "Bash(npm uninstall:*)",
       "Bash(docker compose:*)",
-      "Bash(docker build:*)"
+      "Bash(docker build:*)",
+      "mcp__playwright__*",
+      "Skill(update-config)",
+      "Bash(cp -r ~/.claude/skills/pv260-upload /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/)",
+      "Bash(cp -r ~/.claude/skills/pv260-update /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/)"
     ]
   }
 }
