@@ -78,11 +78,11 @@ Follow these steps using Playwright MCP tools:
 }
 ```
 
-Save the result to `~/pv260-raw.json` using the `filename` parameter of `browser_evaluate`.
+Save the result to `./pv260-raw.json` using the `filename` parameter of `browser_evaluate`. This writes to the current working directory (repo root).
 
 5. **Run the parser** in batch mode, using the selected group name (e.g. `YSoft1` or `YSoft2`) in the output filename:
 ```bash
-PYTHONIOENCODING=utf-8 python .claude/skills/pv260-collect/parse.py < ~/pv260-raw.json > pv260-points-{group}.json
+PYTHONIOENCODING=utf-8 python ~/.claude/skills/pv260-collect/parse.py < ./pv260-raw.json > pv260-points-{group}.json
 ```
 Replace `{group}` with the actual group name, e.g. `pv260-points-YSoft1.json`.
 
@@ -154,16 +154,16 @@ Write final output to `pv260-points-{group}.json` (e.g. `pv260-points-YSoft1.jso
 
 ## Parser Script
 
-`.claude/skills/pv260-collect/parse.py` — auto-detects mode from stdin:
+`~/.claude/skills/pv260-collect/parse.py` — auto-detects mode from stdin:
 
 **Single student** (raw textarea text → parsed object):
 ```bash
-echo "<textarea text>" | PYTHONIOENCODING=utf-8 python .claude/skills/pv260-collect/parse.py
+echo "<textarea text>" | PYTHONIOENCODING=utf-8 python ~/.claude/skills/pv260-collect/parse.py
 ```
 
 **Batch** (JSON array of `{studentName, textareaValue}` → full results array):
 ```bash
-echo '[{"studentName":"...", "textareaValue":"..."}]' | PYTHONIOENCODING=utf-8 python .claude/skills/pv260-collect/parse.py > pv260-results.json
+echo '[{"studentName":"...", "textareaValue":"..."}]' | PYTHONIOENCODING=utf-8 python ~/.claude/skills/pv260-collect/parse.py > pv260-results.json
 ```
 
 `PYTHONIOENCODING=utf-8` is required on Windows for Czech characters.
@@ -180,4 +180,4 @@ echo '[{"studentName":"...", "textareaValue":"..."}]' | PYTHONIOENCODING=utf-8 p
 | Textarea value is empty via DOM | Use `browser_evaluate` to read `.value` directly, not `.textContent` |
 | Duplicate entries per student | Expected — each student has 2 textarea rows; use `studentSeen` Set to deduplicate |
 | Student name shows "Blok: PV260..." | Wrong row selected — only use rows with exactly 9 cells, and cell index 3 |
-| `parse.py` not found | Ensure the skill directory exists: `.claude/skills/pv260-collect/` |
+| `parse.py` not found | Ensure the skill directory exists: `~/.claude/skills/pv260-collect/` |

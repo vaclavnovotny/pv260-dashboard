@@ -22,7 +22,18 @@
       "mcp__playwright__*",
       "Skill(update-config)",
       "Bash(cp -r ~/.claude/skills/pv260-upload /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/)",
-      "Bash(cp -r ~/.claude/skills/pv260-update /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/)"
+      "Bash(cp -r ~/.claude/skills/pv260-update /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/)",
+      "Bash(echo \"OK: $\\(python -c \"import json; d=json.load\\(open\\('pv260-points-YSoft1.json'\\)\\); print\\(len\\(d\\), 'students'\\)\"\\)\")",
+      "Bash(cp /c/Users/ganz/.claude/skills/pv260-collect/skill.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/skills/pv260-collect/skill.md)",
+      "Bash(cp /c/Users/ganz/.claude/skills/pv260-collect/parse.py /c/Users/ganz/Documents/PV260/github/pv260-dashboard/skills/pv260-collect/parse.py)",
+      "Bash(cp /c/Users/ganz/.claude/skills/pv260-upload/SKILL.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/skills/pv260-upload/SKILL.md)",
+      "Bash(cp /c/Users/ganz/.claude/skills/pv260-update/SKILL.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/skills/pv260-update/SKILL.md)",
+      "Bash(powershell.exe:*)",
+      "Bash(mkdir -p /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-collect /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-upload /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-update /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/terminal-pv260)",
+      "Bash(cp /c/Users/ganz/.claude/skills/pv260-collect/skill.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-collect/skill.md)",
+      "Bash(cp /c/Users/ganz/.claude/skills/pv260-collect/parse.py /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-collect/parse.py)",
+      "Bash(cp /c/Users/ganz/.claude/skills/pv260-upload/SKILL.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-upload/SKILL.md)",
+      "Bash(cp /c/Users/ganz/.claude/skills/pv260-update/SKILL.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-update/SKILL.md)"
     ]
   }
 }

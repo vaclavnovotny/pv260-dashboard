@@ -18,7 +18,7 @@ The backend must be running on port 3001. If it's not, ask the user to start it 
 Ask the user for:
 1. **Seminar group** — e.g. `YSoft1` or `YSoft2`
 2. **Course name** — if unspecified, navigate first, read the dropdown, and present options before asking
-3. **File path** — e.g. `C:\users\ganz\pv260-points-YSoft2.json`
+3. **File path** — e.g. `pv260-points-YSoft2.json` in the current working directory (repo root)
 
 ---
 
@@ -35,8 +35,10 @@ curl -s -o /dev/null -w "%{http_code}" http://localhost:3001/api/courses
 If the result is NOT `200`, start it with Docker Compose from the project root:
 
 ```bash
-cd /c/Users/ganz/Documents/PV260/github/pv260-dashboard && docker compose up -d
+docker compose up -d
 ```
+
+(Run from the project root — the current working directory when this skill is invoked.)
 
 Wait a few seconds, then verify it's up before proceeding.
 
@@ -89,10 +91,14 @@ browser_click → ref for the "Choose File" button (Results JSON section, NOT th
 This opens the file chooser. Then immediately:
 
 ```
-mcp__playwright__browser_file_upload → paths: ["C:\\Users\\ganz\\Documents\\PV260\\github\\pv260-dashboard\\pv260-points-{group}.json"]
+mcp__playwright__browser_file_upload → paths: ["<absolute path to pv260-points-{group}.json>"]
 ```
 
-Use the absolute Windows path to the file (wherever it was produced — no need to copy it first).
+The file is in the current working directory (repo root). Get its Windows absolute path:
+```bash
+cygpath -w "$(realpath pv260-points-{group}.json)"
+```
+This returns a Windows-style path (e.g. `C:\Users\...\pv260-points-YSoft1.json`). Playwright MCP requires Windows-style paths on Windows — Unix-style paths (`/c/Users/...`) cause ENOENT errors.
 
 ### 5. Click Upload
 
@@ -116,7 +122,7 @@ Report the result to the user (e.g. *"Uploaded 20 team-increment scores."*).
 Read max points from the repo:
 
 ```bash
-cat /c/Users/ganz/Documents/PV260/github/pv260-dashboard/max-points.json
+cat max-points.json
 ```
 
 For each increment in that file (e.g. `V2: 9`, `V3: 11`):
