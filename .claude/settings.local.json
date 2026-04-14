@@ -1,43 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm init:*)",
-      "Bash(npm install:*)",
-      "Bash(node -e \"require\\(''./index''\\); console.log\\(''OK''\\)\")",
-      "*",
-      "Bash(\"C:/Users/ganz/Documents/PV260/app/backend/src/routes/courses.js\":*)",
-      "Bash(__NEW_LINE_9a2eee10d9479fe3__ cat:*)",
-      "Bash(\"C:/Users/ganz/Documents/PV260/app/backend/src/routes/upload.js\":*)",
-      "Bash(\"C:/Users/ganz/Documents/PV260/app/backend/src/routes/stats.js\":*)",
-      "Bash(npx jest:*)",
-      "Bash(npm test:*)",
-      "Bash(npm create:*)",
-      "Bash(npx vite:*)",
-      "Bash(cd:*)",
-      "Bash(curl:*)",
-      "Bash(node -e \"const {animals} = require\\(''unique-names-generator''\\); const STRIDE=37; console.log\\([0,1,2,3,4,5,6,7].map\\(i => animals[\\(i*STRIDE\\)%animals.length]\\).join\\('', ''\\)\\)\")",
-      "Bash(npm uninstall:*)",
-      "Bash(docker compose:*)",
-      "Bash(docker build:*)",
-      "mcp__playwright__*",
-      "Skill(update-config)",
-      "Bash(cp -r ~/.claude/skills/pv260-upload /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/)",
-      "Bash(cp -r ~/.claude/skills/pv260-update /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/)",
-      "Bash(echo \"OK: $\\(python -c \"import json; d=json.load\\(open\\('pv260-points-YSoft1.json'\\)\\); print\\(len\\(d\\), 'students'\\)\"\\)\")",
-      "Bash(cp /c/Users/ganz/.claude/skills/pv260-collect/skill.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/skills/pv260-collect/skill.md)",
-      "Bash(cp /c/Users/ganz/.claude/skills/pv260-collect/parse.py /c/Users/ganz/Documents/PV260/github/pv260-dashboard/skills/pv260-collect/parse.py)",
-      "Bash(cp /c/Users/ganz/.claude/skills/pv260-upload/SKILL.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/skills/pv260-upload/SKILL.md)",
-      "Bash(cp /c/Users/ganz/.claude/skills/pv260-update/SKILL.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/skills/pv260-update/SKILL.md)",
-      "Bash(powershell.exe:*)",
-      "Bash(mkdir -p /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-collect /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-upload /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-update /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/terminal-pv260)",
-      "Bash(cp /c/Users/ganz/.claude/skills/pv260-collect/skill.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-collect/skill.md)",
-      "Bash(cp /c/Users/ganz/.claude/skills/pv260-collect/parse.py /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-collect/parse.py)",
-      "Bash(cp /c/Users/ganz/.claude/skills/pv260-upload/SKILL.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-upload/SKILL.md)",
-      "Bash(cp /c/Users/ganz/.claude/skills/pv260-update/SKILL.md /c/Users/ganz/Documents/PV260/github/pv260-dashboard/.claude/skills/pv260-update/SKILL.md)",
-      "Bash(timeout 3 node launcher.js)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(npm run:*)"
+      "Bash(*)",
+      "mcp__plugin_playwright_playwright__*",
+      "Skill(*)"
     ]
   }
 }
