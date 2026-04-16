@@ -66,6 +66,6 @@ jobs:
         id: summary
         uses: ctrf-io/github-test-reporter@v1
         with:
-          report-path: '${{ input.REPORT_FILEPATH }}'
+          report-path: '${{ inputs.REPORT_FILEPATH }}'
           template-path: './summary-template.hbs'
         if: always()
