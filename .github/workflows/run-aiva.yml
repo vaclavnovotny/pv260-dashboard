@@ -1,6 +1,8 @@
 name: Run AIVA Test Batch in a more complex way
 
 on:
+  schedule:
+    - cron: '*/15 * * * *'
   workflow_dispatch:
     inputs:
       LABELS:
@@ -49,14 +51,14 @@ jobs:
         uses: aiva-actions/run@v1
         with:
           apiKey: ${{ secrets.AIVA_APIKEY }}
-          labels: ${{ inputs.LABELS}}
-          maxNumberOfAgents: ${{ inputs.MAX_NUMBER_OF_AGENTS }}
-          testName: ${{ inputs.TEST_NAME }}
-          globalVariableOverrides: ${{ inputs.GLOBAL_OVERRIDES }}
-          variableOverridesPerTest: ${{ inputs.OVERRIDES_PER_TEST }}
-          gatewayName: ${{ inputs.GATEWAY_NAME }}
-          pollPeriodSeconds: ${{ inputs.POLL_PERIOD }}
-          reportFilePath: ${{ inputs.REPORT_FILEPATH }}
+          labels: ${{ inputs.LABELS || 'pv260,' }}
+          maxNumberOfAgents: ${{ inputs.MAX_NUMBER_OF_AGENTS || 3 }}
+          testName: ${{ inputs.TEST_NAME || 'CI Batch' }}
+          globalVariableOverrides: ${{ inputs.GLOBAL_OVERRIDES || '{"coursename":"CourseName"}' }}
+          variableOverridesPerTest: ${{ inputs.OVERRIDES_PER_TEST || '' }}
+          gatewayName: ${{ inputs.GATEWAY_NAME || 'doma' }}
+          pollPeriodSeconds: ${{ inputs.POLL_PERIOD || 10 }}
+          reportFilePath: ${{ inputs.REPORT_FILEPATH || './batch-ctrf.json' }}
     
       - name: Download Summary template
         id: template-download
