@@ -1,8 +1,6 @@
 name: Run AIVA Test Batch in a more complex way
 
 on:
-  schedule:
-    - cron: '*/15 * * * *'
   workflow_dispatch:
     inputs:
       LABELS:
